@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile</title>
+</head>
+<body>
+	{% if error %}
+	<p>User doesn't exist!</p>
+
+	{% else %}
+	<h1>Welcome {{ name }}</h1>
+	<img src="{{ src }}">
+	<ul>
+		<li>{{ repos }}</li>
+		<li>{{ followers }}</li>
+		<li>{{ following }}</li>
+		<li>{{ gists }}</li>
+	</ul>
+	{% endif %}
+</body>
+</html>
