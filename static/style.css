@@ -1,5 +1,149 @@
-html, body{
+*{
 	padding: 0;
 	margin: 0;
 	outline: none;
+}
+
+body{
+	background: #fff;
+}
+
+.alert{
+	width: 60%;
+	margin: 25vh auto;
+	text-align: center;
+	font-size: 3em;
+	font-family: times;
+	padding: 8px;
+	color: #fff;
+	background: #990305;
+	border-radius: 12px;
+	box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+div{
+	width: 70%;
+	margin: 2% auto;
+	padding: 8px;
+	border: none;
+	box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+h1{
+	font-size: 6em;
+	color: rgba(33,33,33, .7);
+	font-family: monospace;
+	text-align: center;
+	margin-top: 10vh;
+}
+
+img{
+		display: block;
+		margin: 0 auto;
+}
+
+form{
+	width: 100%;
+	margin: 5vh auto;
+	text-align: center;
+}
+
+form input{
+	padding: 4px;
+	border: none;
+	background-color: #ddd;
+	border-radius: 8px;
+	width: 35%;
+	font-size: 2.8em;
+	transition: all 0.4s ease-in-out;
+}
+
+form input:focus{
+	border-bottom: 1px solid #555;
+	border-radius: none;
+	background-color: #fff;
+	width: 45%;
+}
+
+form button{
+	padding: 12px;
+	font-size: 2.4em;
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	background-color: #33b5e5;
+	transition: all 0.4s linear;
+}
+
+form button:hover{
+	cursor: pointer;
+	box-shadow: 1px 3px 11px rgba(33,33,33,.2);
+}
+
+form button:active{
+	transform: translateY(16px);
+}
+
+.profile{
+	background: #ccc;
+}
+
+.img{
+	display: block;
+	margin:  5vh auto;
+	border: 3px solid #fff;
+	border-radius: 8px;
+	height: 240px;
+	width: 250px;
+}
+
+.name{
+	font-size: 3em;
+	margin-top: 5vh;
+}
+
+.user-details{
+	display: block;
+	background-color: #e2e0be;
+	list-style-type: none;
+	width: 30%;
+	margin: 0 auto;
+	padding: 4px;
+	border: 5px solid lightseagreen;
+	border-radius: 12px;
+}
+
+.user-details li{
+	display: block;
+	text-align: initial;
+	font-family: 'Franklin';
+	padding: 6px;
+	padding-left: 64px;
+	padding-right: 64px;
+  font-size: 2em;;
+  background-color: #ccc;
+  border-radius: 6px;
+  margin: 4px;
+  border-left: 6px solid lightcoral;
+	transition: all 0.4s linear;
+}
+
+ .user-details li:hover{
+	cursor: pointer;
+	background-color: #33b5e5;
+}
+
+ a{
+	text-decoration: none;
+	color: #555;
+	transition: all 0.4s linear;
+}
+
+.user-details li span{
+	float: right;
+	background-color: #fff;
+	padding: 3px;
+	border: none;
+	border-radius: 8px;
+	color: crimson;
 }

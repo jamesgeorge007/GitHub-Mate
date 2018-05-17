@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>profile</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
-<body>
+<body class="profile">
+
 	{% if error %}
-	<p>User doesn't exist!</p>
+	<p class="alert">User doesn't exist!</p>
 
 	{% else %}
-	<h1>Welcome {{ name }}</h1>
-	<img src="{{ src }}">
-	<ul>
-		<li>Repositories: {{ repos }}</li>
-		<li>Followers: {{ followers }}</li>
-		<li>Following: {{ following }}</li>
-		<li>Gists: {{ gists }}</li>
+	<img class="img" src="{{ src }}">
+	<h1 class="name">{{ name }}</h1>
+	<ul class="user-details">
+		<li><a href="https://github.com/{{username}}/repositories" target="_blank">Repositories: <span>{{ repos }}</span></a></li>
+		<li><a href="https://github.com/{{username}}/followers" target="_blank">Followers: <span>{{ followers }}</span></a></li>
+		<li><a href="https://github.com/{{username}}/following" target="_blank">Following: <span>{{ following }}</span></a></li>
+		<li><a href="https://gist.github.com/{{username}}" target="_blank">Public Gists: <span>{{ gists }}</span></a></li>
 	</ul>
 	{% endif %}
+
+	{% if connectionError %}
+	<p>Check your internet connection!</p>
+	{% endif %}
+
 </body>
 </html>
