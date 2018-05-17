@@ -10,7 +10,7 @@
 
 * Clone the repository
 * Navigate to the project directory
-* Install the dependencies ` ` ` pip install flask; pip install requests ` ` `
+* Install the dependencies ` ` ` pip install requirements.txt ` ` `
 * Run ` ` ` python server.py ` ` `
 * Open your browser and navigate to localhost:5000
 * Serving port can be changed by supplying the port arguement within ` ` ` app.run() ` ` `
