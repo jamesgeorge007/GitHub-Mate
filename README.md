@@ -6,6 +6,12 @@
 - Validations are implemented for connection interruptions and non-existing users.
 - Done as a hobby project
 
+## Have a look
+
+![image](https://github.com/jamesgeorge007/github-mate-web/blob/master/static/assets/home.PNG)
+
+![image](https://github.com/jamesgeorge007/github-mate-web/blob/master/static/assets/profile.PNG)
+
 ## Instructions
 
 * Clone the repository
