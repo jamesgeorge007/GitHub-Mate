@@ -120,11 +120,11 @@ form button:active{
 	padding: 6px;
 	padding-left: 64px;
 	padding-right: 64px;
-  font-size: 2em;;
-  background-color: #ccc;
-  border-radius: 6px;
-  margin: 4px;
-  border-left: 6px solid lightcoral;
+  	font-size: 2em;;
+  	background-color: #ccc;
+  	border-radius: 6px;
+  	margin: 4px;
+  	border-left: 6px solid lightcoral;
 	transition: all 0.4s linear;
 }
 
