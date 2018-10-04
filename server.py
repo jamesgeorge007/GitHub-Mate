@@ -19,23 +19,22 @@ def profile():
             req = requests.get('https://api.github.com/users/' + username)
             if req.ok:
                 github_data = json.loads(req.content)
-                print(github_data)
                 repo_url = requests.get(github_data.get('repos_url'))
                 repo_url = repo_url.json()
                 repos_with_issues = {}
+                repos_with_issues_name = {}
                 for repo in repo_url:
-                    print(repo)
                     open_issues = repo.get('open_issues')
                     if open_issues > 0:
                         repos_with_issues[repo.get('html_url')] = open_issues
-                print(repos_with_issues)
+                        repos_with_issues_name[repo.get('html_url')] = repo.get('name')
                 name = github_data['name']
                 profile_pic = github_data['avatar_url']
                 repos = github_data['public_repos']
                 followers = github_data['followers']
                 following = github_data['following']
                 gists = github_data['public_gists']
-                return render_template('profile.html', username=username, name=name, src=profile_pic, repos=repos, followers=followers, following=following, gists=gists, repos_with_issues=repos_with_issues)
+                return render_template('profile.html', username=username, name=name, src=profile_pic, repos=repos, followers=followers, following=following, gists=gists, repos_with_issues=repos_with_issues, repos_with_issues_name=repos_with_issues_name)
             else:
                 return render_template('profile.html', error=True)
         except:
