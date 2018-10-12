@@ -1,21 +1,20 @@
-
 from flask import Flask, render_template, request, url_for, redirect
-import requests
-import json
-
+from github import Github, UnknownObjectException
+from requests.exceptions import ConnectionError
 app = Flask(__name__)
 
-@app.route('/')
 
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/profile', methods = ['POST', 'GET'])
 
+@app.route('/profile', methods = ['POST', 'GET'])
 def profile():
     if request.method == 'POST':
         username = request.form['username']
         try:
+ master
             req = requests.get('https://api.github.com/users/' + username)
             if req.ok:
                 github_data = json.loads(req.content)
@@ -38,9 +37,15 @@ def profile():
             else:
                 return render_template('profile.html', error=True)
         except:
+
+            user = Github().get_user(username)
+            return render_template('profile.html', user=user)
+        except UnknownObjectException:
+            return render_template('profile.html', error=True)
+        except ConnectionError:
+master
             return render_template('connectionError.html')
 
 
 if __name__ == '__main__':
-    #print("Navigate to localhost:5000")
-    app.run(debug = True)
+    app.run(debug=True)
