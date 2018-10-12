@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>profile</title>
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body class="profile">
 
@@ -13,13 +13,13 @@
 	<p class="alert">User doesn't exist!</p>
 
 	{% else %}
-	<img class="img" src="{{ src }}">
+	<img class="img" src="{{ user.avatar_url }}">
 	<h1 class="name">{{ name }}</h1>
 	<ul class="user-details">
-		<li><a href="https://github.com/{{username}}/repositories" target="_blank">Repositories: <span>{{ repos }}</span></a></li>
-		<li><a href="https://github.com/{{username}}/followers" target="_blank">Followers: <span>{{ followers }}</span></a></li>
-		<li><a href="https://github.com/{{username}}/following" target="_blank">Following: <span>{{ following }}</span></a></li>
-		<li><a href="https://gist.github.com/{{username}}" target="_blank">Public Gists: <span>{{ gists }}</span></a></li>
+		<li><a href="https://github.com/{{ user.login }}/repositories" target="_blank">Repositories: <span>{{ user.public_repos }}</span></a></li>
+		<li><a href="https://github.com/{{ user.login }}/followers" target="_blank">Followers: <span>{{ user.followers }}</span></a></li>
+		<li><a href="https://github.com/{{ user.login }}/following" target="_blank">Following: <span>{{ user.following }}</span></a></li>
+		<li><a href="https://gist.github.com/{{ user.login }}" target="_blank">Public Gists: <span>{{ user.public_gists }}</span></a></li>
 	</ul>
 	{% endif %}
 
