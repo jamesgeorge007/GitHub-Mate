@@ -14,7 +14,6 @@ def profile():
     if request.method == 'POST':
         username = request.form['username']
         try:
- master
             req = requests.get('https://api.github.com/users/' + username)
             if req.ok:
                 github_data = json.loads(req.content)
@@ -43,7 +42,6 @@ def profile():
         except UnknownObjectException:
             return render_template('profile.html', error=True)
         except ConnectionError:
-master
             return render_template('connectionError.html')
 
 
