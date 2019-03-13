@@ -20,6 +20,8 @@ def profile():
             return render_template('profile.html', error=True)
         except ConnectionError:
             return render_template('connectionError.html')
+    else:
+        pass
 
 
 if __name__ == '__main__':
