@@ -4,6 +4,11 @@ from requests.exceptions import ConnectionError
 app = Flask(__name__)
 
 
+def function1():
+    if (False):
+        print('nothing')
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
