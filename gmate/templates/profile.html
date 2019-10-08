@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }} Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='profile.css') }}">
+</head>
+<body>
+<div class="frame">
+  <div class="center">
+    
+		<div class="profile">
+			<div class="image">
+				<div class="circle-1"></div>
+				<div class="circle-2"></div>
+				<img src="{{ avatar }}" width="70" height="70" alt="picture of {{ name }}">
+			</div>
+			
+			<div class="name">{{ name }}</div>
+			<div class="job">{{ bio }}</div>
+			
+			<div class="actions">
+				{% if blog %}
+				<a href="{{ blog }}" target="blank"><button class="btn">Blog</button></a>
+				{% endif %}
+				{% if email %}
+				<a href="mailto:{{ email }}"><button class="btn">Email</button></a>
+				{% endif %}
+			</div>
+		</div>
+		
+		<div class="stats">
+			<div class="box">
+				<span class="value">{{ followers }}</span>
+				<span class="parameter">Followers</span>
+			</div>
+			<div class="box">
+				<span class="value">{{ following }}</span>
+				<span class="parameter">Following</span>
+			</div>
+			<div class="box">
+				<span class="value">{{ open_repos }}</span>
+				<span class="parameter">Repos</span>
+			</div>
+		</div>
+  </div>
+</div>
+  
+</body>
+</html>
