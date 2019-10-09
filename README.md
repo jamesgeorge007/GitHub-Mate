@@ -8,7 +8,7 @@
 
 ## Have a look
 
-![image](https://github.com/Ri2parna/GitHub-Mate/blob/master/page1-gmate.PNG)
+![image](https://github.com/Ri2parna/GitHub-Mate/blob/master/page1-gmate.png)
 
 ![image](https://github.com/Ri2parna/GitHub-Mate/blob/master/page2-gmate.png)
 
