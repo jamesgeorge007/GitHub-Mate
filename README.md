@@ -1,5 +1,6 @@
 <h1 align="center">GitHub Mate</h1>
-
+![image](./page1-gmate.png)
+![image](./page2-gmate.png)
 ## Basic Info
 
 - This web app is backed up by the Flask web framework which utilizes GitHub API V3 to fetch details of any user being provided.
