@@ -15,7 +15,7 @@ def profile():
     username=request.form['username']
     response = requests.get("https://api.github.com/users/"+username)
     if(response.status_code != 200):
-        return render_template(ConnectionError)
+        return render_template('index.html',InvalidUserName=True)
     else:
         response = response.json()
         name = response['name'];
@@ -28,4 +28,4 @@ def profile():
         open_repos = response['public_repos']
         return render_template('profile.html',name=name,bio=bio,
         avatar=picture,following=following,followers=followers,
-        open_repos = open_repos,blog=blog,email=email)
+        open_repos = open_repos,blog=blog,email=email,InvalidUserName=False)
