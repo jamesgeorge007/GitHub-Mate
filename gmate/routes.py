@@ -7,7 +7,7 @@ import requests
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',InvalidUserName=False)
 
 
 @app.route('/profile', methods = ['POST', 'GET'])
