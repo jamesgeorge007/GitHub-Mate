@@ -8,9 +8,9 @@
 
 ## Have a look
 
-![image](https://github.com/Ri2parna/GitHub-Mate/blob/master/page1-gmate.png)
+![image](https://i.imgur.com/IufTuMj.png)
 
-![image](https://github.com/Ri2parna/GitHub-Mate/blob/master/page2-gmate.png)
+![image](https://i.imgur.com/ro5OTFF.png)
 
 ## Instructions
 
