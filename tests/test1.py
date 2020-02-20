@@ -8,6 +8,6 @@ class Test1(TestCase):
 
     @patch('server.render_template')
     def test_index(self, patched_render_template: Mock):
-        patched_render_template.return_value = True
+        patched_render_template.return_value = False
         index()
         patched_render_template.assert_called_once()
